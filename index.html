@@ -534,5 +534,22 @@
     <script src="assets/js/analytics.js"></script>
     <script src="assets/js/security.js"></script>
     <script src="assets/js/animations.js"></script>
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', event => event.preventDefault());
+      
+        // Optional: Disable common shortcut keys for copy or inspect
+        document.addEventListener('keydown', event => {
+          // Disable Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, F12
+          if (
+            event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J') ||
+            event.key === 'F12' ||
+            (event.ctrlKey && event.key === 'U')
+          ) {
+            event.preventDefault();
+          }
+        });
+      </script>
+      
 </body>
 </html>
