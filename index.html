@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOWA - Digital Credits. Real Community.</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="NOWA provides an inclusive digital ecosystem for local commerce and safe, efficient transport in Nakuru, Kenya. Building a financially stronger, more connected community.">
+    <meta name="keywords" content="digital credits, Nakuru, Kenya, fintech, transport, community, financial inclusion, mobile payments">
+    <meta name="author" content="NOWA Team">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="NOWA - Digital Credits. Real Community.">
+    <meta property="og:description" content="Building a Financially Stronger, More Connected Nakuru through digital credits and safe transport.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:url" content="https://nowa.org">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NOWA">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NOWA - Digital Credits. Real Community.">
+    <meta name="twitter:description" content="Building a Financially Stronger, More Connected Nakuru through digital credits and safe transport.">
+    <meta name="twitter:image" content="/images/twitter-card.jpg">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#10b981">
+    <meta name="msapplication-TileColor" content="#10b981">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Three.js for 3D elements -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Use Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Lucide icons for aesthetics -->
+    <script type="module">
+        import { createIcons, icons } from 'https://cdn.jsdelivr.net/npm/lucide-esm@latest';
+        createIcons({ icons });
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-inter">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 bg-gradient-to-br from-emerald-600 to-emerald-800 z-50 flex items-center justify-center">
+        <div class="text-center text-white">
+            <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-white mx-auto mb-4"></div>
+            <p class="text-xl font-semibold">Loading NOWA...</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-md transition-all duration-300" id="navbar">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <div class="flex items-center space-x-2">
+                <!-- NOWA Logo/Name -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf animate-pulse">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.7 6.6 16.5 7.9 16.5 7.9 19.4 6.5 22 2.7 22 2.7 15.6 1.7 13.9 7.6 13.9 7.6 12.2 14.6 11 20 11 20Z"/>
+                    <path d="M2 20h.01"/>
+                    <path d="M7 16l-3.3-3.3"/>
+                    <path d="M10 12l-5-5"/>
+                    <path d="M14 8l-7-7"/>
+                </svg>
+                <span class="text-xl font-bold text-gray-900">NOWA</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="nav-link text-gray-600 hover:text-emerald-600 transition duration-150">Home</a>
+                <a href="#services" class="nav-link text-gray-600 hover:text-emerald-600 transition duration-150">Services</a>
+                <a href="#impact" class="nav-link text-gray-600 hover:text-emerald-600 transition duration-150">Impact</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-emerald-600 transition duration-150">About</a>
+                <a href="#contact" class="nav-link text-gray-600 hover:text-emerald-600 transition duration-150">Contact</a>
+            </div>
+            <a href="#" class="hidden md:block gradient-bg text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition duration-150 shadow-lg hover:scale-105 transform">
+                <i data-lucide="wallet" class="w-4 h-4 inline-block mr-1"></i> Get Started
+            </a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 rounded-lg hover:bg-gray-100 transition duration-150">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md shadow-xl">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 transition duration-150">Home</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 transition duration-150">Services</a>
+                <a href="#impact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 transition duration-150">Impact</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 transition duration-150">About</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 transition duration-150">Contact</a>
+                <a href="#" class="block w-full text-center gradient-bg text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition duration-150 mt-2">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Homepage: Hero Section with 3D Background -->
+        <section id="home" class="relative pt-20 pb-20 md:pt-32 md:pb-40 bg-white overflow-hidden min-h-screen flex items-center">
+            <!-- 3D Background Canvas -->
+            <div id="hero-canvas" class="absolute inset-0 z-0"></div>
+            
+            <!-- Floating Elements -->
+            <div class="absolute inset-0 z-10">
+                <div class="floating-element" style="top: 20%; left: 10%; animation-delay: 0s;">
+                    <i data-lucide="wallet" class="w-8 h-8 text-emerald-500/30"></i>
+                </div>
+                <div class="floating-element" style="top: 60%; right: 15%; animation-delay: 2s;">
+                    <i data-lucide="users" class="w-6 h-6 text-emerald-400/40"></i>
+                </div>
+                <div class="floating-element" style="top: 30%; right: 25%; animation-delay: 4s;">
+                    <i data-lucide="shield-check" class="w-7 h-7 text-emerald-600/30"></i>
+                </div>
+                <div class="floating-element" style="bottom: 30%; left: 20%; animation-delay: 1s;">
+                    <i data-lucide="trending-up" class="w-5 h-5 text-emerald-500/40"></i>
+                </div>
+            </div>
+
+            <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-gray-900 mb-6" data-aos="fade-up" data-aos-duration="1000">
+                    <span class="block text-gradient animate-gradient">Digital Credits.</span>
+                    <span class="block text-emerald-600" data-aos="fade-up" data-aos-delay="200">Real Community.</span>
+                </h1>
+                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-600 mb-10" data-aos="fade-up" data-aos-delay="400">
+                    <strong>Building a Financially Stronger, More Connected Nakuru.</strong>
+                    <br>NOWA provides an inclusive digital ecosystem for local commerce and safe, efficient transport, keeping money circulating where it matters most: your community.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#" class="w-full sm:w-auto gradient-bg text-white px-10 py-4 rounded-full font-bold text-lg hover:opacity-90 transition duration-300 shadow-xl shadow-emerald-500/30 hover:scale-105 transform">
+                        <i data-lucide="phone" class="w-5 h-5 inline-block mr-2"></i> Get Started Today
+                    </a>
+                    <a href="#impact" class="w-full sm:w-auto bg-white text-emerald-600 border border-emerald-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-emerald-50 transition duration-300 shadow-md hover:scale-105 transform">
+                        See Our Impact
+                    </a>
+                </div>
+
+                <!-- Stats Counter -->
+                <div class="mt-16 pt-8 border-t border-gray-200" data-aos="fade-up" data-aos-delay="800">
+                    <p class="text-gray-500 font-semibold mb-6">Trusted by the Nakuru Community</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-emerald-600 counter" data-target="100">0</div>
+                            <div class="text-sm text-gray-600">Merchants</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-emerald-600 counter" data-target="5000">0</div>
+                            <div class="text-sm text-gray-600">Users</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-emerald-600 counter" data-target="25">0</div>
+                            <div class="text-sm text-gray-600">Routes</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-emerald-600 counter" data-target="98">0</div>
+                            <div class="text-sm text-gray-600">% Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Services Offered Section -->
+        <section id="services" class="py-20 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-center text-gray-900 sm:text-4xl mb-4" data-aos="fade-up">Our Core Services</h2>
+                <div class="section-separator"></div>
+                <p class="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">NOWA combines finance and mobility to create a truly connected community experience.</p>
+
+                <!-- Service 1: Digital Credits Ecosystem -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12 border-t-4 border-emerald-600 hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="md:grid md:grid-cols-12 md:gap-8 items-center">
+                        <div class="md:col-span-6 lg:col-span-5 mb-8 md:mb-0">
+                            <i data-lucide="wallet" class="w-12 h-12 text-emerald-600 mb-4 animate-bounce"></i>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">The NOWA Digital Credits Ecosystem</h3>
+                            <p class="text-gray-600 text-lg">A stable, digital credit system designed for local trade within Nakuru, ensuring money stays within the community to fuel local businesses and opportunities.</p>
+                        </div>
+
+                        <div class="md:col-span-6 lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- User Benefits -->
+                            <div class="p-6 bg-emerald-50 rounded-xl hover:bg-emerald-100 transition duration-300">
+                                <i data-lucide="user" class="w-6 h-6 text-emerald-600 mb-2"></i>
+                                <h4 class="font-bold text-gray-800 text-xl mb-1">For Users</h4>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li><strong>Accessible:</strong> Easily top-up credits at local agents.</li>
+                                    <li><strong>Safe:</strong> Pay instantly and securely using a simple mobile app.</li>
+                                    <li><strong>Incentivized:</strong> Earn rewards for local purchases.</li>
+                                </ul>
+                            </div>
+                            <!-- Merchant Benefits -->
+                            <div class="p-6 bg-emerald-100 rounded-xl hover:bg-emerald-200 transition duration-300">
+                                <i data-lucide="store" class="w-6 h-6 text-emerald-700 mb-2"></i>
+                                <h4 class="font-bold text-gray-800 text-xl mb-1">For Merchants</h4>
+                                <ul class="space-y-2 text-gray-700 text-sm">
+                                    <li><strong>Zero Hidden Fees:</strong> Low, transparent transaction costs.</li>
+                                    <li><strong>Instant Settlement:</strong> Payments credited immediately; no waiting time.</li>
+                                    <li><strong>Wider Customer Base:</strong> Access to the growing NOWA user community.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Transport Platform -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border-t-4 border-teal-600 hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="600">
+                    <div class="md:grid md:grid-cols-12 md:gap-8 items-center">
+                        <div class="md:col-span-6 lg:col-span-5 mb-8 md:mb-0 order-2 md:order-1">
+                            <i data-lucide="bus" class="w-12 h-12 text-teal-600 mb-4 animate-pulse"></i>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">The Seamless Transport Platform</h3>
+                            <p class="text-gray-600 text-lg">A cashless, organized system for booking and paying for local transport services (matatus, taxis, and boda-bodas), making mobility safer and more efficient.</p>
+                        </div>
+
+                        <div class="md:col-span-6 lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 order-1 md:order-2">
+                            <div class="p-6 bg-teal-50 rounded-xl hover:bg-teal-100 transition duration-300">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-teal-600 mb-2"></i>
+                                <h4 class="font-bold text-gray-800 text-xl mb-1">Safety & Convenience</h4>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li><strong>Safety First:</strong> Vetted drivers and GPS tracking for all journeys.</li>
+                                    <li><strong>Fair Fares:</strong> Transparent, standardized pricing; no cash haggling.</li>
+                                    <li><strong>Convenience:</strong> Book and pay directly using NOWA digital credits.</li>
+                                </ul>
+                            </div>
+                            <div class="p-6 bg-teal-100 rounded-xl hover:bg-teal-200 transition duration-300">
+                                <i data-lucide="wrench" class="w-6 h-6 text-teal-700 mb-2"></i>
+                                <h4 class="font-bold text-gray-800 text-xl mb-1">Driver Support</h4>
+                                <ul class="space-y-2 text-gray-700 text-sm">
+                                    <li><strong>Stability:</strong> Digital tools for organized route management.</li>
+                                    <li><strong>Training:</strong> Resources for professional development and service standards.</li>
+                                    <li><strong>Earning:</strong> Predictable, stable income through cashless payments.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Testimonials Section with Slider -->
+        <section id="impact" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-center text-gray-900 sm:text-4xl mb-4" data-aos="fade-up">Voices from the Community</h2>
+                <div class="section-separator"></div>
+                <p class="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">Hear how NOWA is making a real, positive difference in the daily lives of Nakuru's residents and business owners.</p>
+
+                <!-- Testimonials Slider -->
+                <div class="testimonials-slider relative">
+                    <div class="testimonials-container flex transition-transform duration-500 ease-in-out" id="testimonials-container">
+                        <!-- Testimonial 1: Merchant Success (Elias) -->
+                        <div class="testimonial-slide w-full flex-shrink-0 px-4">
+                            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center border-t-4 border-green-500 hover:shadow-xl transition duration-300">
+                                <img src="https://placehold.co/100x100/16a34a/ffffff?text=Elias" alt="Elias, Kiosk Owner" class="w-24 h-24 rounded-full object-cover mb-4 ring-4 ring-green-100">
+                                <blockquote class="italic text-gray-700 mb-4">
+                                    "Before NOWA, finding change was a daily headache. Now, payments are instant and digital. It led to a <strong>25% increase in sales</strong> because my customers shop without worry."
+                                </blockquote>
+                                <p class="font-bold text-lg text-gray-900">Elias</p>
+                                <p class="text-sm text-green-600">Kiosk Owner, CBD Market</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2: User Empowerment (Jane) -->
+                        <div class="testimonial-slide w-full flex-shrink-0 px-4">
+                            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center border-t-4 border-emerald-500 hover:shadow-xl transition duration-300">
+                                <img src="https://placehold.co/100x100/059669/ffffff?text=Jane" alt="Jane, Mother of Two" class="w-24 h-24 rounded-full object-cover mb-4 ring-4 ring-emerald-100">
+                                <blockquote class="italic text-gray-700 mb-4">
+                                    "I no longer have to worry about my children carrying cash for school transport. Paying safely and digitally using NOWA gives me incredible peace of mind."
+                                </blockquote>
+                                <p class="font-bold text-lg text-gray-900">Jane M.</p>
+                                <p class="text-sm text-emerald-600">Community Resident & Mother</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3: Driver/Rider Story (Peter) -->
+                        <div class="testimonial-slide w-full flex-shrink-0 px-4">
+                            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center border-t-4 border-teal-500 hover:shadow-xl transition duration-300">
+                                <img src="https://placehold.co/100x100/0d9488/ffffff?text=Peter" alt="Peter, Boda-boda Rider" class="w-24 h-24 rounded-full object-cover mb-4 ring-4 ring-teal-100">
+                                <blockquote class="italic text-gray-700 mb-4">
+                                    "The platform gives me a steady, predictable income and the passengers feel safer with the GPS tracking. It has professionalized my work."
+                                </blockquote>
+                                <p class="font-bold text-lg text-gray-900">Peter K.</p>
+                                <p class="text-sm text-teal-600">Boda-boda Rider, Transport Platform</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slider Controls -->
+                    <div class="flex justify-center mt-8 space-x-4">
+                        <button class="slider-btn bg-emerald-600 text-white px-4 py-2 rounded-full hover:bg-emerald-700 transition duration-300" data-slide="0">
+                            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                        </button>
+                        <button class="slider-btn bg-emerald-600 text-white px-4 py-2 rounded-full hover:bg-emerald-700 transition duration-300" data-slide="1">
+                            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 & 6. Mission, Vision, and Revenue Model -->
+        <section id="about" class="py-20 gradient-bg text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Our Commitment to Nakuru</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Mission & Vision -->
+                    <div>
+                        <h3 class="text-3xl font-extrabold mb-4 border-b border-white/50 pb-2">Mission & Vision</h3>
+                        <p class="text-lg mb-6"><strong>Mission:</strong> To empower the Nakuru community by providing an inclusive, stable, and accessible digital ecosystem for local commerce and safe, efficient mobility.</p>
+                        <p class="text-lg"><strong>Vision:</strong> A financially resilient and digitally connected Nakuru where opportunity, economic stability, and safe transport are accessible to every resident.</p>
+                    </div>
+
+                    <!-- Revenue Model -->
+                    <div>
+                        <h3 class="text-3xl font-extrabold mb-4 border-b border-white/50 pb-2">Our Sustainability Model</h3>
+                        <p class="text-lg mb-4">NOWA is built to be self-sustaining, ensuring long-term community benefits through transparent and minimal fees, avoiding reliance on endless external funding.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i data-lucide="percent" class="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-yellow-300"></i>
+                                <span><strong>Micro-Transaction Fees (Primary):</strong> A very small, transparent fee applied to merchant transactions—lower than traditional providers.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="sparkles" class="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-yellow-300"></i>
+                                <span><strong>Premium Merchant Tools:</strong> Optional, value-added services like advanced analytics and loyalty program management for merchants.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="handshake" class="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-yellow-300"></i>
+                                <span><strong>Strategic Partnerships:</strong> Collaborations with institutions and NGOs focused on economic inclusion and transport safety.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7 & 8. Roadmap & Go-To-Market Strategy -->
+        <section id="roadmap" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-center text-gray-900 sm:text-4xl mb-4" data-aos="fade-up">Our Journey Ahead</h2>
+                <div class="section-separator"></div>
+
+                <!-- Roadmap Timeline -->
+                <div class="relative max-w-5xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Vertical Line -->
+                    <div class="hidden md:block absolute w-1 bg-emerald-200 h-full left-1/2 transform -translate-x-1/2"></div>
+
+                    <!-- Q1 -->
+                    <div class="mb-8 flex justify-between items-center w-full right-full">
+                        <div class="w-full md:w-5/12 p-4 rounded-lg bg-white shadow-lg border-l-4 border-emerald-600 hover:shadow-xl transition duration-300">
+                            <span class="text-xs font-semibold text-emerald-600 uppercase">Q1: Pilot & Launch</span>
+                            <h4 class="font-bold text-gray-900 text-xl my-1">Digital Credits Public Launch</h4>
+                            <p class="text-sm text-gray-600">Complete beta testing, launch the user and merchant apps, and onboard the first <strong>100 key merchants</strong> in the Nakuru CBD area.</p>
+                        </div>
+                        <div class="hidden md:block w-2 h-2 rounded-full bg-emerald-600 absolute left-1/2 transform -translate-x-1/2 ring-4 ring-white"></div>
+                        <div class="hidden md:block w-5/12"></div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="mb-8 flex justify-between items-center w-full left-full flex-row-reverse">
+                        <div class="w-full md:w-5/12 p-4 rounded-lg bg-white shadow-lg border-r-4 border-emerald-600 hover:shadow-xl transition duration-300">
+                            <span class="text-xs font-semibold text-emerald-600 uppercase">Q2: Growth & Expansion</span>
+                            <h4 class="font-bold text-gray-900 text-xl my-1">Transport Platform Rollout</h4>
+                            <p class="text-sm text-gray-600">Integrate the transport module with 5 core matatu/boda-boda saccos. Achieve <strong>10,000 active users</strong> engaging in weekly transactions.</p>
+                        </div>
+                        <div class="hidden md:block w-2 h-2 rounded-full bg-emerald-600 absolute left-1/2 transform -translate-x-1/2 ring-4 ring-white"></div>
+                        <div class="hidden md:block w-5/12"></div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="mb-8 flex justify-between items-center w-full right-full">
+                        <div class="w-full md:w-5/12 p-4 rounded-lg bg-white shadow-lg border-l-4 border-emerald-600 hover:shadow-xl transition duration-300">
+                            <span class="text-xs font-semibold text-emerald-600 uppercase">Q3: Outreach & Deepening</span>
+                            <h4 class="font-bold text-gray-900 text-xl my-1">Community Ambassador Program</h4>
+                            <p class="text-sm text-gray-600">Launch a training program in two sub-counties. Introduce a <strong>Merchant Lending/Credit Feature</strong> (Pilot).</p>
+                        </div>
+                        <div class="hidden md:block w-2 h-2 rounded-full bg-emerald-600 absolute left-1/2 transform -translate-x-1/2 ring-4 ring-white"></div>
+                        <div class="hidden md:block w-5/12"></div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="mb-8 flex justify-between items-center w-full left-full flex-row-reverse">
+                        <div class="w-full md:w-5/12 p-4 rounded-lg bg-white shadow-lg border-r-4 border-emerald-600 hover:shadow-xl transition duration-300">
+                            <span class="text-xs font-semibold text-emerald-600 uppercase">Q4: Scaling & Investment</span>
+                            <h4 class="font-bold text-gray-900 text-xl my-1">Regional Replication Readiness</h4>
+                            <p class="text-sm text-gray-600">Secure <strong>Series A funding</strong> or major strategic partnership. Achieve <strong>25,000 active users</strong> and ready the system for replication.</p>
+                        </div>
+                        <div class="hidden md:block w-2 h-2 rounded-full bg-emerald-600 absolute left-1/2 transform -translate-x-1/2 ring-4 ring-white"></div>
+                        <div class="hidden md:block w-5/12"></div>
+                    </div>
+                </div>
+
+                <!-- Go-To-Market Strategy -->
+                <div class="mt-20" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold text-center text-gray-900 mb-8">Our Go-To-Market Strategy</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="p-6 bg-white rounded-xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition duration-300">
+                            <i data-lucide="building-2" class="w-8 h-8 text-emerald-600 mb-3"></i>
+                            <p class="font-semibold text-gray-900 mb-1">Merchant-First Workshops</p>
+                            <p class="text-sm text-gray-600">Localized training sessions (Swahili/English) to demonstrate app benefits and simplify onboarding.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition duration-300">
+                            <i data-lucide="briefcase" class="w-8 h-8 text-emerald-600 mb-3"></i>
+                            <p class="font-semibold text-gray-900 mb-1">Community Ambassadors</p>
+                            <p class="text-sm text-gray-600">Recruiting local leaders as agents for user registration, top-ups, and peer-to-peer training.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition duration-300">
+                            <i data-lucide="smartphone" class="w-8 h-8 text-emerald-600 mb-3"></i>
+                            <p class="font-semibold text-gray-900 mb-1">Simple, Accessible Onboarding</p>
+                            <p class="text-sm text-gray-600">Leveraging USSD alongside the app for accessibility, requiring minimal steps to get started.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition duration-300">
+                            <i data-lucide="radio" class="w-8 h-8 text-emerald-600 mb-3"></i>
+                            <p class="font-semibold text-gray-900 mb-1">Local Media Engagement</p>
+                            <p class="text-sm text-gray-600">Using local radio slots and visual social media campaigns to build awareness and trust.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Team Overview Section -->
+        <section id="team" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-center text-gray-900 sm:text-4xl mb-4" data-aos="fade-up">Meet the Leadership</h2>
+                <div class="section-separator"></div>
+                <p class="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">A team with the right balance of technical expertise, local knowledge, and financial inclusion experience.</p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <!-- Team Member 1: CEO/Co-Founder -->
+                    <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://placehold.co/150x150/16a34a/ffffff?text=CEO" alt="CEO Photo" class="w-36 h-36 rounded-full object-cover mb-4 shadow-lg ring-4 ring-emerald-50 hover:ring-emerald-200 transition duration-300">
+                        <h4 class="font-bold text-lg text-gray-900">Aisha K.</h4>
+                        <p class="text-sm font-medium text-emerald-600">CEO / Co-Founder</p>
+                        <p class="text-xs text-gray-500 mt-2">Vision & Strategy: Experienced in Fintech and local economic development.</p>
+                    </div>
+
+                    <!-- Team Member 2: CTO/Co-Founder -->
+                    <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="400">
+                        <img src="https://placehold.co/150x150/059669/ffffff?text=CTO" alt="CTO Photo" class="w-36 h-36 rounded-full object-cover mb-4 shadow-lg ring-4 ring-emerald-50 hover:ring-emerald-200 transition duration-300">
+                        <h4 class="font-bold text-lg text-gray-900">David O.</h4>
+                        <p class="text-sm font-medium text-emerald-600">CTO / Co-Founder</p>
+                        <p class="text-xs text-gray-500 mt-2">Technology & Platform: Leads development with a focus on accessible, secure mobile technology.</p>
+                    </div>
+
+                    <!-- Team Member 3: Head of Community Outreach -->
+                    <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="600">
+                        <img src="https://placehold.co/150x150/0d9488/ffffff?text=Community" alt="Community Head Photo" class="w-36 h-36 rounded-full object-cover mb-4 shadow-lg ring-4 ring-emerald-50 hover:ring-emerald-200 transition duration-300">
+                        <h4 class="font-bold text-lg text-gray-900">Mercy W.</h4>
+                        <p class="text-sm font-medium text-emerald-600">Head of Community Outreach</p>
+                        <p class="text-xs text-gray-500 mt-2">Local Engagement: Deeply rooted in Nakuru; ensures solutions meet community needs.</p>
+                    </div>
+
+                    <!-- Team Member 4: Head of Merchant Relations -->
+                    <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="800">
+                        <img src="https://placehold.co/150x150/064e3b/ffffff?text=Merchant" alt="Merchant Head Photo" class="w-36 h-36 rounded-full object-cover mb-4 shadow-lg ring-4 ring-emerald-50 hover:ring-emerald-200 transition duration-300">
+                        <h4 class="font-bold text-lg text-gray-900">Samson A.</h4>
+                        <p class="text-sm font-medium text-emerald-600">Head of Merchant Relations</p>
+                        <p class="text-xs text-gray-500 mt-2">Business & Finance: Focuses on merchant stability and transparent revenue models.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Footer -->
+        <section id="contact" class="py-16 gradient-bg text-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+                <h2 class="text-3xl font-extrabold mb-4">Ready to Join the Oasis?</h2>
+                <p class="text-xl mb-8">Download the NOWA app today and start experiencing a more connected, financially inclusive Nakuru.</p>
+                <div class="flex justify-center gap-4">
+                    <a href="#" class="bg-white text-emerald-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 shadow-lg hover:scale-105 transform">
+                        <i data-lucide="download" class="w-5 h-5 inline-block mr-2"></i> Download App
+                    </a>
+                    <a href="mailto:info@nowa.org" class="border border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition duration-300 hover:scale-105 transform">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:justify-between md:items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.7 6.6 16.5 7.9 16.5 7.9 19.4 6.5 22 2.7 22 2.7 15.6 1.7 13.9 7.6 13.9 7.6 12.2 14.6 11 20 11 20Z"/>
+                            <path d="M2 20h.01"/>
+                            <path d="M7 16l-3.3-3.3"/>
+                            <path d="M10 12l-5-5"/>
+                            <path d="M14 8l-7-7"/>
+                        </svg>
+                        <span class="text-lg font-bold text-white">NOWA</span>
+                    </div>
+                    <p class="mt-2 text-sm">Nakuru Oasis Welfare Association</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#services" class="hover:text-white transition duration-150">Services</a>
+                    <a href="#impact" class="hover:text-white transition duration-150">Impact</a>
+                    <a href="#team" class="hover:text-white transition duration-150">Team</a>
+                    <a href="mailto:info@nowa.org" class="hover:text-white transition duration-150">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+                &copy; 2024 NOWA. All rights reserved. | Terms & Privacy
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/analytics.js"></script>
+    <script src="assets/js/security.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>
