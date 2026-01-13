@@ -14,13 +14,16 @@
 
 /* Seamless background with NOWA logo */
 body {
+    background-color: #f9fafb;
+    position: relative;
+}
+
+.hero-bg {
     background-image: url('../../images/bg_image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    background-color: #f9fafb;
-    position: relative;
 }
 
 /* body::before {
