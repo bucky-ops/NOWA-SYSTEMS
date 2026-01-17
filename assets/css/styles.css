@@ -13,7 +13,7 @@
 }
 
 /* Seamless background with NOWA logo */
-body {
+/* body {
     background-image: url('../../images/bg_image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,9 +21,9 @@ body {
     background-attachment: fixed;
     background-color: #f9fafb;
     position: relative;
-}
+} */
 
-/* body::before {
+body::before {
     content: '';
     position: fixed;
     top: 0;
@@ -33,7 +33,7 @@ body {
     background-color: rgba(249, 250, 251, 0.88);
     z-index: -1;
     pointer-events: none;
-} */
+}
 
 /* NOWA Logo Styles */
 .nowa-logo {
