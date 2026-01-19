@@ -656,5 +656,117 @@ class NOWAUXEnhancements {
 // Initialize UX enhancements
 const uxEnhancements = new NOWAUXEnhancements();
 
+// Additional micro-animations
+class NOWAMicroAnimations {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        this.addStaggerAnimations();
+        this.addTypingEffect();
+        this.addParallaxScroll();
+        this.addRevealOnScroll();
+    }
+
+    addStaggerAnimations() {
+        // Stagger card animations
+        const cards = document.querySelectorAll('.stagger-card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+            card.classList.add('animate-fade-in-up');
+        });
+    }
+
+    addTypingEffect() {
+        const typingElements = document.querySelectorAll('.typing-effect');
+        typingElements.forEach(element => {
+            this.typeWriter(element, element.textContent, 50);
+        });
+    }
+
+    typeWriter(element, text, speed) {
+        element.textContent = '';
+        let i = 0;
+        const timer = setInterval(() => {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+            } else {
+                clearInterval(timer);
+            }
+        }, speed);
+    }
+
+    addParallaxScroll() {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax-element');
+
+            parallaxElements.forEach(element => {
+                const speed = element.dataset.speed || 0.5;
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
+            });
+        });
+    }
+
+    addRevealOnScroll() {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    }
+}
+
+// Add additional CSS for new animations
+const additionalStyles = document.createElement('style');
+additionalStyles.textContent = `
+  .animate-fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .parallax-element {
+    will-change: transform;
+  }
+`;
+document.head.appendChild(additionalStyles);
+
+// Initialize micro-animations
+const microAnimations = new NOWAMicroAnimations();
+
+// Make micro-animations available globally
+window.NOWAMicroAnimations = microAnimations;
+
 // Export for use in other modules
 export default nowaAnimations;

@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Block access to admin areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/internal/
+
+# Block access to sensitive files
+Disallow: *.json
+Disallow: /assets/js/config.js
+
+# Sitemap
+Sitemap: https://nowa-systems.vercel.app/sitemap.xml
