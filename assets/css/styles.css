@@ -284,6 +284,35 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Responsive enhancements */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 640px) {
+    .text-4xl {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    .text-3xl {
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 768px) {
+    .max-w-7xl {
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    button, .btn-primary, a[role="button"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
