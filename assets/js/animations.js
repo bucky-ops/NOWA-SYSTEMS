@@ -601,5 +601,60 @@ nowaAnimations.addRippleStyles();
 // Make animations available globally
 window.NOWAAnimations = nowaAnimations;
 
+// Add back to top button and smooth scroll
+class NOWAUXEnhancements {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        this.addSmoothScroll();
+        this.addBackToTopButton();
+    }
+
+    addSmoothScroll() {
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+
+    addBackToTopButton() {
+        const button = document.createElement('button');
+        button.className = 'back-to-top';
+        button.innerHTML = '<i data-lucide="arrow-up" class="w-5 h-5"></i>';
+        button.setAttribute('aria-label', 'Back to top');
+        document.body.appendChild(button);
+
+        // Show/hide based on scroll
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                button.classList.add('show');
+            } else {
+                button.classList.remove('show');
+            }
+        });
+
+        button.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
+// Initialize UX enhancements
+const uxEnhancements = new NOWAUXEnhancements();
+
 // Export for use in other modules
 export default nowaAnimations;
