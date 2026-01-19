@@ -891,26 +891,26 @@
                      <div class="section-separator"></div>
                      <p class="text-xl text-gray-600">Find answers to common questions about NOWA Systems.</p>
                  </div>
-                 <div class="space-y-6" data-aos="fade-up" data-aos-delay="200">
-                     <div class="bg-white rounded-lg shadow-md p-6">
+                 <div class="flex overflow-x-auto space-x-6 pb-4" data-aos="fade-up" data-aos-delay="200">
+                     <div class="bg-white rounded-lg shadow-md p-4 min-w-[250px] flex-shrink-0">
                          <h3 class="text-lg font-semibold text-gray-900 mb-2">What is NOWA's digital credits system?</h3>
-                         <p class="text-gray-600">NOWA's digital credits system is a stable, community-focused currency designed to keep money circulating within Nakuru. It enables secure, instant transactions for local commerce.</p>
+                         <p class="text-gray-600 text-sm">NOWA's digital credits system is a stable, community-focused currency designed to keep money circulating within Nakuru. It enables secure, instant transactions for local commerce.</p>
                      </div>
-                     <div class="bg-white rounded-lg shadow-md p-6">
+                     <div class="bg-white rounded-lg shadow-md p-4 min-w-[250px] flex-shrink-0">
                          <h3 class="text-lg font-semibold text-gray-900 mb-2">How does the transport platform work?</h3>
-                         <p class="text-gray-600">Our transport platform connects riders with vetted drivers through a cashless system. Users can book rides, track their journey in real-time, and pay securely using NOWA credits.</p>
+                         <p class="text-gray-600 text-sm">Our transport platform connects riders with vetted drivers through a cashless system. Users can book rides, track their journey in real-time, and pay securely using NOWA credits.</p>
                      </div>
-                     <div class="bg-white rounded-lg shadow-md p-6">
+                     <div class="bg-white rounded-lg shadow-md p-4 min-w-[250px] flex-shrink-0">
                          <h3 class="text-lg font-semibold text-gray-900 mb-2">Is NOWA secure?</h3>
-                         <p class="text-gray-600">Yes, NOWA implements bank-level security with encryption, secure APIs, and compliance with international standards. All transactions are protected and user data is safeguarded.</p>
+                         <p class="text-gray-600 text-sm">Yes, NOWA implements bank-level security with encryption, secure APIs, and compliance with international standards. All transactions are protected and user data is safeguarded.</p>
                      </div>
-                     <div class="bg-white rounded-lg shadow-md p-6">
+                     <div class="bg-white rounded-lg shadow-md p-4 min-w-[250px] flex-shrink-0">
                          <h3 class="text-lg font-semibold text-gray-900 mb-2">What are the fees?</h3>
-                         <p class="text-gray-600">NOWA offers transparent, low fees - much lower than traditional payment processors. Our micro-transaction fees support the platform while keeping costs affordable for merchants and users.</p>
+                         <p class="text-gray-600 text-sm">NOWA offers transparent, low fees - much lower than traditional payment processors. Our micro-transaction fees support the platform while keeping costs affordable for merchants and users.</p>
                      </div>
-                     <div class="bg-white rounded-lg shadow-md p-6">
+                     <div class="bg-white rounded-lg shadow-md p-4 min-w-[250px] flex-shrink-0">
                          <h3 class="text-lg font-semibold text-gray-900 mb-2">How do I get started?</h3>
-                         <p class="text-gray-600">Download the NOWA app, register with your details, and top up credits at any authorized agent. Our community ambassadors are available to help with onboarding.</p>
+                         <p class="text-gray-600 text-sm">Download the NOWA app, register with your details, and top up credits at any authorized agent. Our community ambassadors are available to help with onboarding.</p>
                      </div>
                  </div>
              </div>
@@ -1007,12 +1007,7 @@
                 <p class="text-xl mb-8">Download the NOWA app today and start experiencing a more connected, financially
                     inclusive Nakuru.</p>
                 <div class="flex justify-center gap-4">
-             <div class="hidden md:flex items-center space-x-4 mr-4">
-                 <select class="bg-transparent text-gray-600 border border-gray-300 rounded px-2 py-1 text-sm" onchange="changeLanguage(this.value)">
-                     <option value="en">EN</option>
-                     <option value="sw">SW</option>
-                 </select>
-             </div>
+
              <a href="#"
                  class="hidden md:block gradient-bg text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition duration-150 shadow-lg hover:scale-105 transform">
                  <i data-lucide="wallet" class="w-4 h-4 inline-block mr-1"></i> Get Started
@@ -1110,12 +1105,6 @@
          }
          function closeBlogModal(id) {
              document.getElementById('blog-modal-' + id).classList.add('hidden');
-         }
-
-         // Language switcher (placeholder)
-         function changeLanguage(lang) {
-             // Placeholder for language switching
-             alert('Language switching to ' + lang + ' - Feature coming soon!');
          }
 
          // Disable right-click

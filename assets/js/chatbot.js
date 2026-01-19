@@ -103,6 +103,17 @@ class NOWAChatbot {
     this.addMessage('user', message);
     input.value = '';
 
+    // Local AI logic for demo
+    const localResponse = this.generateLocalResponse(message.toLowerCase());
+    this.addMessage('bot', localResponse.response);
+
+    if (localResponse.escalate) {
+      this.isEscalating = true;
+      this.showEscalationForm(message);
+    }
+
+    // Uncomment below for backend integration
+    /*
     try {
       const response = await fetch(`${this.apiUrl}/api/chat`, {
         method: 'POST',
@@ -120,6 +131,30 @@ class NOWAChatbot {
     } catch (error) {
       this.addMessage('bot', 'Sorry, I encountered an error. Please try again.');
     }
+    */
+  }
+
+  generateLocalResponse(message) {
+    let response = '';
+    let escalate = false;
+
+    if (message.includes('hello') || message.includes('hi')) {
+      response = 'Hello! How can I help you with NOWA Systems today?';
+    } else if (message.includes('what is nowa') || (message.includes('what') && message.includes('nowa'))) {
+      response = 'NOWA Systems is a digital credits and transport platform for the Nakuru community in Kenya. We provide an inclusive digital ecosystem for local commerce and safe transport.';
+    } else if (message.includes('services') || message.includes('what do you do')) {
+      response = 'NOWA Systems offers: Digital transformation, software development, AI automation, IT consulting.';
+    } else if (message.includes('contact') || message.includes('email')) {
+      response = 'You can contact us at info@nowasystems.com or visit our website.';
+    } else if (message.includes('help') || message.includes('human')) {
+      escalate = true;
+      response = 'I need to escalate this to our human support team. Could you please provide your details?';
+    } else {
+      response = "I'm not sure about that. Would you like me to connect you with our human support team?";
+      escalate = true; // Force escalation for demo
+    }
+
+    return { response, escalate };
   }
 
   addMessage(sender, text) {

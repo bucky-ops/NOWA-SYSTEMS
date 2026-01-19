@@ -42,6 +42,9 @@ function generateResponse(message) {
   if (lowerMsg.includes('hello') || lowerMsg.includes('hi')) {
     response = 'Hello! How can I help you with NOWA Systems today?';
     confidence = 1;
+  } else if (lowerMsg.includes('what is nowa') || (lowerMsg.includes('what') && lowerMsg.includes('nowa'))) {
+    response = 'NOWA Systems is a digital credits and transport platform for the Nakuru community in Kenya. We provide an inclusive digital ecosystem for local commerce and safe transport.';
+    confidence = 0.9;
   } else if (lowerMsg.includes('services') || lowerMsg.includes('what do you do')) {
     response = `NOWA Systems offers: ${KNOWLEDGE_BASE.services.join(', ')}. How can I assist you with these services?`;
     confidence = 0.9;
