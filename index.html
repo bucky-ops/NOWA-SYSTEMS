@@ -6,14 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOWA - Digital Credits. Real Community.</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="NOWA provides an inclusive digital ecosystem for local commerce and safe, efficient transport in Nakuru, Kenya. Building a financially stronger, more connected community.">
-    <meta name="keywords"
-        content="digital credits, Nakuru, Kenya, fintech, transport, community, financial inclusion, mobile payments">
-    <meta name="author" content="NOWA Team">
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- SEO Meta Tags -->
+     <meta name="description"
+         content="NOWA provides an inclusive digital ecosystem for local commerce and safe, efficient transport in Nakuru, Kenya. Building a financially stronger, more connected community.">
+     <meta name="keywords"
+         content="digital credits, Nakuru, Kenya, fintech, transport, community, financial inclusion, mobile payments">
+     <meta name="author" content="NOWA Team">
+     <meta name="robots" content="index, follow">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="theme-color" content="#10b981">
+     <link rel="canonical" href="https://nowa-systems.vercel.app">
+
+     <!-- Schema.org Structured Data -->
+     <script type="application/ld+json">
+     {
+       "@context": "https://schema.org",
+       "@type": "Organization",
+       "name": "NOWA Systems",
+       "url": "https://nowa-systems.vercel.app",
+       "logo": "https://nowa-systems.vercel.app/images/nowa-icon.png",
+       "description": "Digital credits and transport platform for Nakuru community",
+       "contactPoint": {
+         "@type": "ContactPoint",
+         "telephone": "+254-XXX-XXX-XXX",
+         "contactType": "customer service",
+         "email": "info@nowasystems.com"
+       },
+       "sameAs": [
+         "https://twitter.com/nowasystems",
+         "https://linkedin.com/company/nowa-systems"
+       ]
+     }
+     </script>
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="NOWA - Digital Credits. Real Community.">
@@ -75,6 +99,8 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-inter">
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-emerald-600 text-white px-4 py-2 rounded z-50">Skip to main content</a>
     <!-- Loading Screen -->
     <div id="loading-screen"
         class="fixed inset-0 bg-gradient-to-br from-emerald-600 to-emerald-800 z-50 flex items-center justify-center">
@@ -136,7 +162,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- 1. Homepage: Hero Section with 3D Background -->
         <section id="home"
             class="relative pt-20 pb-20 md:pt-32 md:pb-40 overflow-hidden min-h-screen flex items-center">
@@ -191,8 +217,8 @@
 
                     <!-- Right Column: Image -->
                     <div class="relative" data-aos="fade-left" data-aos-delay="400">
-                         <img src="images/bg_image.jpg" alt="NOWA Community Impact"
-                             class="w-80 h-64 sm:h-80 lg:h-96 rounded-2xl shadow-2xl object-cover hover:scale-105 transition-transform duration-500 ring-4 ring-emerald-100 mx-auto">
+                         <img src="images/bg_image.jpg" alt="NOWA Community Impact - People in Nakuru using digital services"
+                             class="w-80 h-64 sm:h-80 lg:h-96 rounded-2xl shadow-2xl object-cover hover:scale-105 transition-transform duration-500 ring-4 ring-emerald-100 mx-auto" loading="lazy">
                         <div
                             class="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full blur-2xl opacity-30 animate-pulse">
                         </div>
@@ -469,10 +495,65 @@
                         </button>
                     </div>
                 </div>
-            </div>
-        </section>
+             </div>
+         </section>
 
-        <!-- 4 & 6. Mission, Vision, and Revenue Model -->
+         <!-- Success Stories Section -->
+         <section id="success-stories" class="py-20 bg-white">
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="text-center mb-12" data-aos="fade-up">
+                     <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">Success Stories</h2>
+                     <div class="section-separator"></div>
+                     <p class="text-xl text-gray-600">Real merchants sharing their NOWA experience.</p>
+                 </div>
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+                     <div class="bg-gray-50 rounded-xl p-6 shadow-md">
+                         <div class="flex items-center mb-4">
+                             <img src="https://placehold.co/60x60/16a34a/ffffff?text=Shop" alt="Green Groceries Shop" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+                             <div>
+                                 <h4 class="font-bold text-gray-900">Green Groceries</h4>
+                                 <p class="text-sm text-gray-600">CBD Market</p>
+                             </div>
+                         </div>
+                         <p class="text-gray-700 mb-4">"NOWA increased our daily sales by 35%. No more waiting for change or carrying cash."</p>
+                         <div class="flex items-center text-emerald-600">
+                             <i data-lucide="trending-up" class="w-4 h-4 mr-1"></i>
+                             <span class="text-sm font-semibold">35% sales increase</span>
+                         </div>
+                     </div>
+                     <div class="bg-gray-50 rounded-xl p-6 shadow-md">
+                         <div class="flex items-center mb-4">
+                             <img src="https://placehold.co/60x60/059669/ffffff?text=Cafe" alt="Corner Cafe" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+                             <div>
+                                 <h4 class="font-bold text-gray-900">Corner Cafe</h4>
+                                 <p class="text-sm text-gray-600">Riverside</p>
+                             </div>
+                         </div>
+                         <p class="text-gray-700 mb-4">"Customers love the convenience. We've seen a 50% increase in repeat customers."</p>
+                         <div class="flex items-center text-emerald-600">
+                             <i data-lucide="users" class="w-4 h-4 mr-1"></i>
+                             <span class="text-sm font-semibold">50% more repeat customers</span>
+                         </div>
+                     </div>
+                     <div class="bg-gray-50 rounded-xl p-6 shadow-md">
+                         <div class="flex items-center mb-4">
+                             <img src="https://placehold.co/60x60/0d9488/ffffff?text=Pharmacy" alt="Wellness Pharmacy" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+                             <div>
+                                 <h4 class="font-bold text-gray-900">Wellness Pharmacy</h4>
+                                 <p class="text-sm text-gray-600">Koinange Street</p>
+                             </div>
+                         </div>
+                         <p class="text-gray-700 mb-4">"Security and speed have transformed our operations. Highly recommended!"</p>
+                         <div class="flex items-center text-emerald-600">
+                             <i data-lucide="shield-check" class="w-4 h-4 mr-1"></i>
+                             <span class="text-sm font-semibold">Enhanced security</span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+         <!-- 4 & 6. Mission, Vision, and Revenue Model -->
         <section id="about" class="py-20 gradient-bg text-white section-watermark">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Our Commitment to Nakuru</h2>
@@ -647,8 +728,8 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                     <!-- Team Member 1: CEO/Co-Founder -->
                     <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
-                        <img src="https://placehold.co/150x150/16a34a/ffffff?text=CEO" alt="CEO Photo"
-                            class="w-36 h-36 rounded-full object-cover mb-4 shadow-lg ring-4 ring-emerald-50 hover:ring-emerald-200 transition duration-300">
+                         <img src="https://placehold.co/150x150/16a34a/ffffff?text=CEO" alt="Aisha K. - CEO and Co-Founder of NOWA Systems"
+                             class="w-36 h-36 rounded-full object-cover mb-4 shadow-lg ring-4 ring-emerald-50 hover:ring-emerald-200 transition duration-300" loading="lazy">
                         <h4 class="font-bold text-lg text-gray-900">Aisha K.</h4>
                         <p class="text-sm font-medium text-emerald-600">CEO / Co-Founder</p>
                         <p class="text-xs text-gray-500 mt-2">Vision & Strategy: Experienced in Fintech and local
@@ -802,6 +883,39 @@
              </div>
          </div>
 
+         <!-- FAQ Section -->
+         <section id="faq" class="py-20 bg-gray-50">
+             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="text-center mb-12" data-aos="fade-up">
+                     <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">Frequently Asked Questions</h2>
+                     <div class="section-separator"></div>
+                     <p class="text-xl text-gray-600">Find answers to common questions about NOWA Systems.</p>
+                 </div>
+                 <div class="space-y-6" data-aos="fade-up" data-aos-delay="200">
+                     <div class="bg-white rounded-lg shadow-md p-6">
+                         <h3 class="text-lg font-semibold text-gray-900 mb-2">What is NOWA's digital credits system?</h3>
+                         <p class="text-gray-600">NOWA's digital credits system is a stable, community-focused currency designed to keep money circulating within Nakuru. It enables secure, instant transactions for local commerce.</p>
+                     </div>
+                     <div class="bg-white rounded-lg shadow-md p-6">
+                         <h3 class="text-lg font-semibold text-gray-900 mb-2">How does the transport platform work?</h3>
+                         <p class="text-gray-600">Our transport platform connects riders with vetted drivers through a cashless system. Users can book rides, track their journey in real-time, and pay securely using NOWA credits.</p>
+                     </div>
+                     <div class="bg-white rounded-lg shadow-md p-6">
+                         <h3 class="text-lg font-semibold text-gray-900 mb-2">Is NOWA secure?</h3>
+                         <p class="text-gray-600">Yes, NOWA implements bank-level security with encryption, secure APIs, and compliance with international standards. All transactions are protected and user data is safeguarded.</p>
+                     </div>
+                     <div class="bg-white rounded-lg shadow-md p-6">
+                         <h3 class="text-lg font-semibold text-gray-900 mb-2">What are the fees?</h3>
+                         <p class="text-gray-600">NOWA offers transparent, low fees - much lower than traditional payment processors. Our micro-transaction fees support the platform while keeping costs affordable for merchants and users.</p>
+                     </div>
+                     <div class="bg-white rounded-lg shadow-md p-6">
+                         <h3 class="text-lg font-semibold text-gray-900 mb-2">How do I get started?</h3>
+                         <p class="text-gray-600">Download the NOWA app, register with your details, and top up credits at any authorized agent. Our community ambassadors are available to help with onboarding.</p>
+                     </div>
+                 </div>
+             </div>
+         </section>
+
          <!-- Contact Form Section -->
          <section id="contact-form" class="py-20 bg-gradient-to-br from-emerald-50 to-teal-50">
              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -893,10 +1007,16 @@
                 <p class="text-xl mb-8">Download the NOWA app today and start experiencing a more connected, financially
                     inclusive Nakuru.</p>
                 <div class="flex justify-center gap-4">
-                    <a href="#"
-                        class="bg-white text-emerald-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 shadow-lg hover:scale-105 transform">
-                        <i data-lucide="download" class="w-5 h-5 inline-block mr-2"></i> Download App
-                    </a>
+             <div class="hidden md:flex items-center space-x-4 mr-4">
+                 <select class="bg-transparent text-gray-600 border border-gray-300 rounded px-2 py-1 text-sm" onchange="changeLanguage(this.value)">
+                     <option value="en">EN</option>
+                     <option value="sw">SW</option>
+                 </select>
+             </div>
+             <a href="#"
+                 class="hidden md:block gradient-bg text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition duration-150 shadow-lg hover:scale-105 transform">
+                 <i data-lucide="wallet" class="w-4 h-4 inline-block mr-1"></i> Get Started
+             </a>
                     <a href="mailto:info@nowa.org"
                         class="border border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition duration-300 hover:scale-105 transform">
                         Contact Us
@@ -949,11 +1069,20 @@
                     <a href="mailto:info@nowa.org" class="hover:text-white transition duration-150">Contact</a>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-                &copy; 2024 NOWA. All rights reserved. | Terms & Privacy
-            </div>
+             <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+                 &copy; 2024 NOWA. All rights reserved. | <a href="#" class="hover:text-white">Terms of Service</a> | <a href="#" class="hover:text-white">Privacy Policy</a> | <a href="#" class="hover:text-white">Cookie Policy</a>
+             </div>
         </div>
     </footer>
+
+     <!-- Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+       gtag('config', 'GA_MEASUREMENT_ID');
+     </script>
 
      <!-- Custom JavaScript -->
      <script src="assets/js/main.js"></script>
@@ -981,6 +1110,12 @@
          }
          function closeBlogModal(id) {
              document.getElementById('blog-modal-' + id).classList.add('hidden');
+         }
+
+         // Language switcher (placeholder)
+         function changeLanguage(lang) {
+             // Placeholder for language switching
+             alert('Language switching to ' + lang + ' - Feature coming soon!');
          }
 
          // Disable right-click
