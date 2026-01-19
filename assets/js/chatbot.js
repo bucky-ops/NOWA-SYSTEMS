@@ -18,8 +18,9 @@ class NOWAChatbot {
     const widget = document.createElement('div');
     widget.id = 'nowa-chatbot-widget';
     widget.innerHTML = `
-      <div id="nowa-chat-toggle" class="fixed bottom-6 right-6 bg-emerald-600 text-white rounded-full w-14 h-14 flex items-center justify-center cursor-pointer shadow-lg hover:bg-emerald-700 transition-colors z-50">
-        <i data-lucide="message-circle" class="w-6 h-6"></i>
+      <div id="nowa-chat-toggle" class="fixed bottom-6 right-6 bg-emerald-600 text-white rounded-full w-20 h-14 flex items-center justify-center cursor-pointer shadow-lg hover:bg-emerald-700 transition-colors z-50">
+        <img src="images/nowa-icon.png" alt="NOWA" class="w-6 h-6 mr-1 rounded-full">
+        <span class="text-sm font-semibold">Chat</span>
       </div>
 
       <div id="nowa-chat-window" class="fixed bottom-24 right-6 w-96 h-[500px] bg-gray-900 text-white rounded-2xl shadow-2xl hidden flex flex-col z-40">
