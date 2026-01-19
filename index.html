@@ -191,8 +191,8 @@
 
                     <!-- Right Column: Image -->
                     <div class="relative" data-aos="fade-left" data-aos-delay="400">
-                        <img src="images/bg_image.jpg" alt="NOWA Community Impact"
-                            class="w-full h-64 sm:h-80 lg:h-auto rounded-2xl shadow-2xl object-cover hover:scale-105 transition-transform duration-500 ring-4 ring-emerald-100 mx-auto">
+                         <img src="images/bg_image.jpg" alt="NOWA Community Impact"
+                             class="w-80 h-64 sm:h-80 lg:h-96 rounded-2xl shadow-2xl object-cover hover:scale-105 transition-transform duration-500 ring-4 ring-emerald-100 mx-auto">
                         <div
                             class="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full blur-2xl opacity-30 animate-pulse">
                         </div>
@@ -694,34 +694,113 @@
                  <h2 class="text-3xl font-extrabold text-center text-gray-900 sm:text-4xl mb-4" data-aos="fade-up">Latest Insights</h2>
                  <div class="section-separator"></div>
                  <p class="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">Stay updated with the latest news, insights, and stories from the NOWA community.</p>
-                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                     <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="400">
-                         <div class="h-48 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
-                             <i data-lucide="file-text" class="w-12 h-12 text-gray-400"></i>
+                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                     <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group" data-aos="fade-up" data-aos-delay="400" onclick="openBlogModal(1)">
+                         <div class="h-48 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                             <i data-lucide="file-text" class="w-16 h-16 text-emerald-600 group-hover:scale-110 transition-transform duration-300"></i>
+                             <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                 <i data-lucide="bookmark" class="w-5 h-5 text-emerald-600"></i>
+                             </div>
                          </div>
-                         <h3 class="text-xl font-bold text-gray-900 mb-2">Digital Transformation in Local Economies</h3>
+                         <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors duration-300">Digital Transformation in Local Economies</h3>
                          <p class="text-gray-600 mb-4">How digital credits are revolutionizing local commerce and building stronger communities.</p>
-                         <a href="#" class="text-emerald-600 font-semibold hover:text-emerald-700">Read More →</a>
-                     </div>
-                     <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="600">
-                         <div class="h-48 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
-                             <i data-lucide="users" class="w-6 h-6 text-gray-400"></i>
+                         <div class="flex items-center justify-between">
+                             <span class="text-emerald-600 font-semibold group-hover:text-emerald-700 transition-colors duration-300">Read More →</span>
+                             <div class="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                 <i data-lucide="share" class="w-4 h-4 text-gray-400 hover:text-emerald-600 cursor-pointer"></i>
+                                 <i data-lucide="heart" class="w-4 h-4 text-gray-400 hover:text-red-500 cursor-pointer"></i>
+                             </div>
                          </div>
-                         <h3 class="text-xl font-bold text-gray-900 mb-2">Building Trust in Fintech</h3>
+                     </div>
+                     <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group" data-aos="fade-up" data-aos-delay="600" onclick="openBlogModal(2)">
+                         <div class="h-48 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                             <i data-lucide="users" class="w-16 h-16 text-emerald-600 group-hover:scale-110 transition-transform duration-300"></i>
+                             <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                 <i data-lucide="bookmark" class="w-5 h-5 text-emerald-600"></i>
+                             </div>
+                         </div>
+                         <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors duration-300">Building Trust in Fintech</h3>
                          <p class="text-gray-600 mb-4">The importance of community-driven approaches to financial technology adoption.</p>
-                         <a href="#" class="text-emerald-600 font-semibold hover:text-emerald-700">Read More →</a>
-                     </div>
-                     <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="800">
-                         <div class="h-48 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
-                             <i data-lucide="trending-up" class="w-6 h-6 text-gray-400"></i>
+                         <div class="flex items-center justify-between">
+                             <span class="text-emerald-600 font-semibold group-hover:text-emerald-700 transition-colors duration-300">Read More →</span>
+                             <div class="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                 <i data-lucide="share" class="w-4 h-4 text-gray-400 hover:text-emerald-600 cursor-pointer"></i>
+                                 <i data-lucide="heart" class="w-4 h-4 text-gray-400 hover:text-red-500 cursor-pointer"></i>
+                             </div>
                          </div>
-                         <h3 class="text-xl font-bold text-gray-900 mb-2">The Future of Transport</h3>
+                     </div>
+                     <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group sm:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="800" onclick="openBlogModal(3)">
+                         <div class="h-48 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                             <i data-lucide="trending-up" class="w-16 h-16 text-emerald-600 group-hover:scale-110 transition-transform duration-300"></i>
+                             <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                 <i data-lucide="bookmark" class="w-5 h-5 text-emerald-600"></i>
+                             </div>
+                         </div>
+                         <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors duration-300">The Future of Transport</h3>
                          <p class="text-gray-600 mb-4">Innovative solutions for safe, efficient, and accessible transportation in urban areas.</p>
-                         <a href="#" class="text-emerald-600 font-semibold hover:text-emerald-700">Read More →</a>
+                         <div class="flex items-center justify-between">
+                             <span class="text-emerald-600 font-semibold group-hover:text-emerald-700 transition-colors duration-300">Read More →</span>
+                             <div class="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                 <i data-lucide="share" class="w-4 h-4 text-gray-400 hover:text-emerald-600 cursor-pointer"></i>
+                                 <i data-lucide="heart" class="w-4 h-4 text-gray-400 hover:text-red-500 cursor-pointer"></i>
+                             </div>
+                         </div>
                      </div>
                  </div>
              </div>
          </section>
+
+         <!-- Blog Modals -->
+         <div id="blog-modal-1" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+             <div class="bg-white rounded-2xl p-8 max-w-4xl w-full max-h-screen overflow-y-auto">
+                 <div class="flex justify-between items-center mb-6">
+                     <h3 class="text-2xl font-bold text-gray-900">Digital Transformation in Local Economies</h3>
+                     <button onclick="closeBlogModal(1)" class="text-gray-500 hover:text-gray-700">
+                         <i data-lucide="x" class="w-6 h-6"></i>
+                     </button>
+                 </div>
+                 <div class="prose max-w-none">
+                     <p class="text-gray-600 mb-4">Published on January 15, 2025</p>
+                     <p>Digital credits are revolutionizing the way local economies function, particularly in communities like Nakuru. By keeping money circulating within the local ecosystem, NOWA's digital credits system ensures that economic benefits stay where they matter most.</p>
+                     <p>This approach not only strengthens local businesses but also fosters a sense of community ownership and responsibility. Merchants report increased customer loyalty and reduced cash handling costs, while users enjoy greater convenience and security in their daily transactions.</p>
+                     <p>As we look to the future, digital transformation in local economies represents a powerful tool for inclusive growth and sustainable development.</p>
+                 </div>
+             </div>
+         </div>
+
+         <div id="blog-modal-2" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+             <div class="bg-white rounded-2xl p-8 max-w-4xl w-full max-h-screen overflow-y-auto">
+                 <div class="flex justify-between items-center mb-6">
+                     <h3 class="text-2xl font-bold text-gray-900">Building Trust in Fintech</h3>
+                     <button onclick="closeBlogModal(2)" class="text-gray-500 hover:text-gray-700">
+                         <i data-lucide="x" class="w-6 h-6"></i>
+                     </button>
+                 </div>
+                 <div class="prose max-w-none">
+                     <p class="text-gray-600 mb-4">Published on January 10, 2025</p>
+                     <p>Trust is the foundation of any financial technology ecosystem. At NOWA, we believe that community-driven approaches are essential for building lasting trust in fintech solutions.</p>
+                     <p>By involving local leaders, merchants, and residents in the development and implementation process, we ensure that our solutions are not only technologically sound but also culturally appropriate and community-focused.</p>
+                     <p>This collaborative approach has led to higher adoption rates and greater user satisfaction, proving that when communities are at the center of fintech innovation, everyone wins.</p>
+                 </div>
+             </div>
+         </div>
+
+         <div id="blog-modal-3" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+             <div class="bg-white rounded-2xl p-8 max-w-4xl w-full max-h-screen overflow-y-auto">
+                 <div class="flex justify-between items-center mb-6">
+                     <h3 class="text-2xl font-bold text-gray-900">The Future of Transport</h3>
+                     <button onclick="closeBlogModal(3)" class="text-gray-500 hover:text-gray-700">
+                         <i data-lucide="x" class="w-6 h-6"></i>
+                     </button>
+                 </div>
+                 <div class="prose max-w-none">
+                     <p class="text-gray-600 mb-4">Published on January 5, 2025</p>
+                     <p>The transportation sector is undergoing a digital revolution, and NOWA is at the forefront of this change in Nakuru. Our seamless transport platform combines safety, efficiency, and accessibility in ways that benefit both riders and drivers.</p>
+                     <p>By integrating cashless payments with GPS tracking and vetted drivers, we're creating a transportation ecosystem that's not only convenient but also secure and reliable.</p>
+                     <p>As we expand our transport platform, we remain committed to prioritizing safety, fair pricing, and community benefits. The future of transport is digital, inclusive, and community-focused.</p>
+                 </div>
+             </div>
+         </div>
 
          <!-- Contact Form Section -->
          <section id="contact-form" class="py-20 bg-gradient-to-br from-emerald-50 to-teal-50">
@@ -894,6 +973,14 @@
              alert('Thank you for your interest! We will contact you soon.');
              document.getElementById('get-started-modal').classList.add('hidden');
          });
+
+         // Blog modal functionality
+         function openBlogModal(id) {
+             document.getElementById('blog-modal-' + id).classList.remove('hidden');
+         }
+         function closeBlogModal(id) {
+             document.getElementById('blog-modal-' + id).classList.add('hidden');
+         }
 
          // Disable right-click
          document.addEventListener('contextmenu', event => event.preventDefault());
