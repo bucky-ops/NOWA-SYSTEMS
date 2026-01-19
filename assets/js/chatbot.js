@@ -43,7 +43,7 @@ class NOWAChatbot {
           <div class="flex space-x-2">
             <input id="nowa-chat-input" type="text" placeholder="Type your message..." class="flex-1 bg-gray-800 text-white rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500">
             <button id="nowa-chat-send" class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
-              <i data-lucide="send" class="w-4 h-4"></i>
+              Send
             </button>
           </div>
         </div>
