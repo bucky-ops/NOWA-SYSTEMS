@@ -267,6 +267,11 @@ window.NOWAAnalytics.trackCustomEvent('custom_event', {
 - Performance budgets
 - Resource optimization
 
+## 📚 Documentation
+
+For more detailed guides, visit:
+- [Vercel Web Analytics Guide](./docs/VERCEL_ANALYTICS.md) - Complete setup guide for Vercel Web Analytics
+
 ## 📞 Support
 
 For technical support or questions:
